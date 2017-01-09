@@ -8,15 +8,15 @@ Human: function(name = 'John Doe', sex = 'not stated', age = 0, nationality = 0)
   this.color= (nationality === 'Nigerian' || nationality === 'Kenyan') ? 'Black' : 'White';
   this.language = (nationality === 'Nigerian') ? 'Yoruba' : 'English';
   this.voice = (sex === 'male' || sex === 'female') ? 'Lovely' : 'Horrible';
-  this.apperance = (sex === 'female') ? 'Lovely' : 'Handsome';
+  this.apperance = (sex === 'female') ? 'Pretty' : 'Handsome';
   this.speak = function() {
    if (this.language === 'Yoruba')
    {
-    this.speak = 'Omo yoruba ni mi, oruko mi si ni ' + this.name ;
+    return 'Omo yoruba ni mi, oruko mi si ni ' + this.name ;
    }
    else
    {
-      this.speak = 'Am proud of my heritage';
+      return 'Am proud of my heritage';
    }
     
     var human = Object.assign(new Human(), this);
